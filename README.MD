@@ -21,16 +21,9 @@ HolyC language support for Visual Studio Code, including:
 
 ## Installation
 
-### From the VS Code Marketplace
-1. Open **Extensions** in VS Code.
-2. Search for **HolyC** (this extension).
-3. Click **Install**.
-
 ### From GitHub releases
 
 * Install the most current .vsix from the GitHub releases page
-
-* Extract the archive and open the folder in VS-Code
 
 * In VS-Code, right click on the .vsix file and click ```Install Extension VSIX```
 
