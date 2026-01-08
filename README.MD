@@ -15,7 +15,7 @@ HolyC language support for Visual Studio Code, including:
 
 ### HolyC file icon theme (Seti fork)
 - A lightweight icon theme based on the familiar Seti look.
-- Adds/overrides icons so HolyC files get their own dedicated icon.
+- Adds icons so HolyC files get their own dedicated icon.
 
 ---
 
