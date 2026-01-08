@@ -4,12 +4,16 @@
   "description": "Syntax highlighting for HolyC (TempleOS).",
   "license": "MIT",
   "icon": "icon.png",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "GreyArea Labs",
   "author": {
     "email": "duncanadam321@gmail.com",
     "name": "Adam S. Duncan",
     "url": "https://github.com/LueWasHere"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LueWasHere/holyc-vscode"
   },
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Programming Languages"],
