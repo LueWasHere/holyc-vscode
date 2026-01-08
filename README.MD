@@ -76,6 +76,9 @@ Then press ```F5``` in VS Code to launch an Extension Development Host window.
 
 ## What files are supported?
 * *.HC/hc — HolyC source files
+* *.H/h — HolyC source files (variation)
+* *.HH/hh — HolyC header/interface files
+* *.DD/dd — HolyC data definition files
 
 (If you use additional HolyC-related extensions and want them icon’d/highlighted too, feel free to open an issue or PR.)
 
