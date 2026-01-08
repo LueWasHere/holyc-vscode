@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "HolyC",
+  "scopeName": "source.holyc",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#preprocessor" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-slash.holyc", "match": "//.*$" },
+        {
+          "name": "comment.block.holyc",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.holyc",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{ "name": "constant.character.escape.holyc", "match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|.|\\n)" }]
+        },
+        {
+          "name": "string.quoted.single.holyc",
+          "begin": "'",
+          "end": "'",
+          "patterns": [{ "name": "constant.character.escape.holyc", "match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|.|\\n)" }]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.hex.holyc", "match": "\\b0[xX][0-9A-Fa-f_]+\\b" },
+        { "name": "constant.numeric.bin.holyc", "match": "\\b0[bB][01_]+\\b" },
+        { "name": "constant.numeric.decimal.holyc", "match": "\\b\\d+(?:_\\d+)*(?:\\.\\d+(?:_\\d+)*)?(?:[eE][+-]?\\d+)?\\b" }
+      ]
+    },
+    "preprocessor": {
+      "patterns": [
+        { "name": "meta.preprocessor.holyc", "match": "^\\s*#\\s*(include|define|ifdef|ifndef|if|elif|else|endif|pragma|error|warning)\\b.*$" }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.holyc",
+          "match": "\\b(if|else|for|while|do|switch|case|default|break|continue|return|goto)\\b"
+        },
+        {
+          "name": "keyword.other.holyc",
+          "match": "\\b(asm|sizeof|typedef|struct|union|enum|class|public|private|static|extern|auto|register|volatile|const)\\b"
+        },
+        {
+          "name": "storage.type.holyc",
+          "match": "\\b(void|char|short|int|long|float|double|signed|unsigned|bool)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.holyc",
+          "match": "\\b(U0|U8|U16|U32|U64|I8|I16|I32|I64|F32|F64|Bool)\\b"
+        },
+        {
+          "name": "constant.language.holyc",
+          "match": "\\b(TRUE|FALSE|NULL)\\b"
+        }
+      ]
+    }
+  }
+}

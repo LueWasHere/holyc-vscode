@@ -1,0 +1,40 @@
+{
+  "name": "holyc-syntax",
+  "displayName": "HolyC Syntax Highlighting",
+  "description": "Syntax highlighting for HolyC (TempleOS).",
+  "license": "MIT",
+  "icon": "icon.png",
+  "version": "0.1.0",
+  "publisher": "GreyArea Labs",
+  "author": {
+    "email": "duncanadam321@gmail.com",
+    "name": "Adam S. Duncan",
+    "url": "https://github.com/LueWasHere"
+  },
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "holyc",
+        "aliases": ["HolyC", "holyc"],
+        "extensions": [".HC", ".hc", ".H", ".h", ".HH", ".hh", ".dd", ".DD"],
+        "configuration": "./language/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "holyc",
+        "scopeName": "source.holyc",
+        "path": "./syntaxes/holyc.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "holyc-icons",
+        "label": "HolyC Icons",
+        "path": "./icons/holyc-icon-theme.json"
+      }
+    ]
+  }
+}
